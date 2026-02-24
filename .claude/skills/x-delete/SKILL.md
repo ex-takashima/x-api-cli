@@ -6,14 +6,12 @@ allowed-tools: Bash
 argument-hint: <post-id>
 ---
 
-Delete a post on X using the xli CLI.
+Delete a post on X using the xli CLI (`@dondonudonjp/xli`).
 
 ## Usage
 
-Run the following command from the project root `D:/project/x-api-cli`:
-
 ```
-node bin/xli.js post delete <id> --yes --json
+npx @dondonudonjp/xli post delete <id> --yes --json
 ```
 
 ## Rules
@@ -27,5 +25,5 @@ node bin/xli.js post delete <id> --yes --json
 ## Examples
 
 ```
-node bin/xli.js post delete 1234567890 --yes --json
+npx @dondonudonjp/xli post delete 1234567890 --yes --json
 ```

@@ -5,30 +5,28 @@ allowed-tools: Bash
 argument-hint: [login --client-id <id>|logout|status|token]
 ---
 
-Manage X API authentication using the xli CLI.
+Manage X API authentication using the xli CLI (`@dondonudonjp/xli`).
 
 ## Usage
 
-Run the following commands from the project root `D:/project/x-api-cli`:
-
 Check auth status:
 ```
-node bin/xli.js auth status --json
+npx @dondonudonjp/xli auth status --json
 ```
 
 Login (opens browser for OAuth):
 ```
-node bin/xli.js auth login --client-id <CLIENT_ID>
+npx @dondonudonjp/xli auth login --client-id <CLIENT_ID>
 ```
 
 Logout:
 ```
-node bin/xli.js auth logout
+npx @dondonudonjp/xli auth logout
 ```
 
 Get access token (for scripting):
 ```
-node bin/xli.js auth token
+npx @dondonudonjp/xli auth token
 ```
 
 ## Rules
@@ -44,8 +42,8 @@ node bin/xli.js auth token
 ## Examples
 
 ```
-node bin/xli.js auth status --json
-node bin/xli.js auth login --client-id Vm1nUXdqMHZ4OW5lQ2MtWE02U2s6MTpjaQ
-node bin/xli.js auth logout
-node bin/xli.js auth token
+npx @dondonudonjp/xli auth status --json
+npx @dondonudonjp/xli auth login --client-id YOUR_CLIENT_ID
+npx @dondonudonjp/xli auth logout
+npx @dondonudonjp/xli auth token
 ```

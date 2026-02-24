@@ -5,25 +5,23 @@ allowed-tools: Bash
 argument-hint: [home|user <username>|mentions] [--max <n>]
 ---
 
-View timelines on X using the xli CLI.
+View timelines on X using the xli CLI (`@dondonudonjp/xli`).
 
 ## Usage
 
-Run one of the following commands from the project root `D:/project/x-api-cli`:
-
 Home timeline (authenticated user's feed):
 ```
-node bin/xli.js timeline home --json
+npx @dondonudonjp/xli timeline home --json
 ```
 
 User's posts:
 ```
-node bin/xli.js timeline user <username> --json
+npx @dondonudonjp/xli timeline user <username> --json
 ```
 
 Mentions:
 ```
-node bin/xli.js timeline mentions --json
+npx @dondonudonjp/xli timeline mentions --json
 ```
 
 ## Rules
@@ -42,7 +40,7 @@ node bin/xli.js timeline mentions --json
 ## Examples
 
 ```
-node bin/xli.js timeline home --max 10 --json
-node bin/xli.js timeline user donanywhere2000 --max 5 --json
-node bin/xli.js timeline mentions --max 10 --json
+npx @dondonudonjp/xli timeline home --max 10 --json
+npx @dondonudonjp/xli timeline user donanywhere2000 --max 5 --json
+npx @dondonudonjp/xli timeline mentions --max 10 --json
 ```

@@ -5,14 +5,12 @@ allowed-tools: Bash
 argument-hint: <query> [--max <n>]
 ---
 
-Search recent posts on X using the xli CLI.
+Search recent posts on X using the xli CLI (`@dondonudonjp/xli`).
 
 ## Usage
 
-Run the following command from the project root `D:/project/x-api-cli`:
-
 ```
-node bin/xli.js search recent "$ARGUMENTS" --json
+npx @dondonudonjp/xli search recent "$ARGUMENTS" --json
 ```
 
 ## Rules
@@ -31,15 +29,15 @@ node bin/xli.js search recent "$ARGUMENTS" --json
 
 Basic search:
 ```
-node bin/xli.js search recent "TypeScript" --max 5 --json
+npx @dondonudonjp/xli search recent "TypeScript" --max 5 --json
 ```
 
 Search with operators:
 ```
-node bin/xli.js search recent "from:elonmusk has:media" --json
+npx @dondonudonjp/xli search recent "from:elonmusk has:media" --json
 ```
 
 Search Japanese posts:
 ```
-node bin/xli.js search recent "cluster lang:ja" --json
+npx @dondonudonjp/xli search recent "cluster lang:ja" --json
 ```

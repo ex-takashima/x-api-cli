@@ -5,14 +5,12 @@ allowed-tools: Bash
 argument-hint: <post-id or URL>
 ---
 
-View a specific post on X using the xli CLI.
+View a specific post on X using the xli CLI (`@dondonudonjp/xli`).
 
 ## Usage
 
-Run the following command from the project root `D:/project/x-api-cli`:
-
 ```
-node bin/xli.js post view <id> --json
+npx @dondonudonjp/xli post view <id> --json
 ```
 
 ## Rules
@@ -31,10 +29,10 @@ node bin/xli.js post view <id> --json
 
 By ID:
 ```
-node bin/xli.js post view 1234567890 --json
+npx @dondonudonjp/xli post view 1234567890 --json
 ```
 
 If user gives URL `https://x.com/someone/status/1234567890`:
 ```
-node bin/xli.js post view 1234567890 --json
+npx @dondonudonjp/xli post view 1234567890 --json
 ```

@@ -5,27 +5,25 @@ allowed-tools: Bash
 argument-hint: <username or "me">
 ---
 
-Look up X user profiles using the xli CLI.
+Look up X user profiles using the xli CLI (`@dondonudonjp/xli`).
 
 ## Usage
 
-Run the following command from the project root `D:/project/x-api-cli`:
-
 View own profile:
 ```
-node bin/xli.js user me --json
+npx @dondonudonjp/xli user me --json
 ```
 
 View another user's profile:
 ```
-node bin/xli.js user view <username> --json
+npx @dondonudonjp/xli user view <username> --json
 ```
 
 ## Rules
 
 1. If `$ARGUMENTS` is empty or "me", show the authenticated user's own profile.
 2. Otherwise, look up the specified username.
-3. Always use `--json` flag to get structured output.
+3. Always use `--json` flag for structured output.
 4. Strip `@` prefix from usernames if provided.
 5. Present results showing:
    - Display name and @username
@@ -39,6 +37,6 @@ node bin/xli.js user view <username> --json
 ## Examples
 
 ```
-node bin/xli.js user me --json
-node bin/xli.js user view elonmusk --json
+npx @dondonudonjp/xli user me --json
+npx @dondonudonjp/xli user view elonmusk --json
 ```

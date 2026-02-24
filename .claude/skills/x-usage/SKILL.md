@@ -5,19 +5,17 @@ allowed-tools: Bash
 argument-hint: [--days <n>]
 ---
 
-Check X API usage statistics using the xli CLI.
+Check X API usage statistics using the xli CLI (`@dondonudonjp/xli`).
 
 ## Usage
 
-Run the following command from the project root `D:/project/x-api-cli`:
-
 ```
-node bin/xli.js usage --json
+npx @dondonudonjp/xli usage --json
 ```
 
 With custom time range:
 ```
-node bin/xli.js usage --days 30 --json
+npx @dondonudonjp/xli usage --days 30 --json
 ```
 
 ## Rules
@@ -30,6 +28,6 @@ node bin/xli.js usage --days 30 --json
 ## Examples
 
 ```
-node bin/xli.js usage --json
-node bin/xli.js usage --days 30 --json
+npx @dondonudonjp/xli usage --json
+npx @dondonudonjp/xli usage --days 30 --json
 ```

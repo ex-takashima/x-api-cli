@@ -7,14 +7,15 @@ Modern CLI for X API v2, built with TypeScript + Commander.js + @xdevplatform/xd
 ## Quick Reference
 
 ```bash
-# Build
-npx tsup
+# Install globally
+npm install -g @dondonudonjp/xli
 
-# Run (from project root)
-node bin/xli.js <command>
+# Or run via npx
+npx @dondonudonjp/xli <command>
 
-# Type check
-npx tsc --noEmit
+# Development
+npx tsup          # Build
+npx tsc --noEmit  # Type check
 ```
 
 ## Available Skills (Slash Commands)

@@ -5,14 +5,12 @@ allowed-tools: Bash
 argument-hint: <text> [--reply-to <id>] [--quote <id>]
 ---
 
-Post a tweet to X using the xli CLI.
+Post a tweet to X using the xli CLI (`@dondonudonjp/xli`).
 
 ## Usage
 
-Run the following command from the project root `D:/project/x-api-cli`:
-
 ```
-node bin/xli.js post create "$ARGUMENTS"
+npx @dondonudonjp/xli post create "$ARGUMENTS"
 ```
 
 ## Rules
@@ -22,21 +20,21 @@ node bin/xli.js post create "$ARGUMENTS"
 3. After posting, show the user the post ID and URL from the output.
 4. If the user wants to reply to a tweet, use `--reply-to <id>`.
 5. If the user wants to quote tweet, use `--quote <id>`.
-6. If the command fails with an auth error, tell the user to run `node bin/xli.js auth login --client-id <id>`.
+6. If the command fails with an auth error, tell the user to run `npx @dondonudonjp/xli auth login --client-id <id>`.
 
 ## Examples
 
 Simple post:
 ```
-node bin/xli.js post create "Hello from xli!"
+npx @dondonudonjp/xli post create "Hello from xli!"
 ```
 
 Reply to a tweet:
 ```
-node bin/xli.js post create "Great point!" --reply-to 1234567890
+npx @dondonudonjp/xli post create "Great point!" --reply-to 1234567890
 ```
 
 Quote tweet:
 ```
-node bin/xli.js post create "Check this out" --quote 1234567890
+npx @dondonudonjp/xli post create "Check this out" --quote 1234567890
 ```
