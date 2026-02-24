@@ -1,14 +1,20 @@
 {
-  "name": "xli",
+  "name": "@dondonudonjp/xli",
   "version": "0.1.0",
-  "description": "Modern CLI for X API v2",
+  "description": "Modern CLI for X API v2 — auth, post, search, timeline, user lookup and more",
   "type": "module",
   "bin": {
-    "xli": "./bin/xli.js"
+    "xli": "./dist/bin/xli.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
+    "prepublishOnly": "npm run build",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit"
@@ -17,10 +23,23 @@
     "x",
     "twitter",
     "cli",
-    "api"
+    "api",
+    "x-api",
+    "twitter-api",
+    "tweet",
+    "oauth2",
+    "pkce"
   ],
-  "author": "",
+  "author": "ex-takashima",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ex-takashima/x-api-cli.git"
+  },
+  "homepage": "https://github.com/ex-takashima/x-api-cli#readme",
+  "bugs": {
+    "url": "https://github.com/ex-takashima/x-api-cli/issues"
+  },
   "engines": {
     "node": ">=20.0.0"
   },
