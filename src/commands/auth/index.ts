@@ -3,10 +3,16 @@ import { loginCommand } from "./login.js";
 import { logoutCommand } from "./logout.js";
 import { statusCommand } from "./status.js";
 import { tokenCommand } from "./token.js";
+import { listCommand } from "./list.js";
+import { switchCommand } from "./switch.js";
+import { removeCommand } from "./remove.js";
 
 export const authCommand = new Command("auth")
   .description("Manage authentication")
   .addCommand(loginCommand)
   .addCommand(logoutCommand)
   .addCommand(statusCommand)
-  .addCommand(tokenCommand);
+  .addCommand(tokenCommand)
+  .addCommand(listCommand)
+  .addCommand(switchCommand)
+  .addCommand(removeCommand);

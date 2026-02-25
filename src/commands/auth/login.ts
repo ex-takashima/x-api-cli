@@ -2,7 +2,7 @@ import { Command } from "commander";
 import ora from "ora";
 import { Client } from "@xdevplatform/xdk";
 import { startLoginFlow } from "../../lib/auth.js";
-import { setAuth, setUser } from "../../lib/config.js";
+import { setAccount, switchAccount } from "../../lib/config.js";
 import { printSuccess, printInfo } from "../../lib/output.js";
 import { handleError } from "../../lib/errors.js";
 
@@ -22,7 +22,6 @@ export const loginCommand = new Command("login")
       const spinner = ora("Waiting for authorization...").start();
 
       const credentials = await startLoginFlow(options.clientId);
-      setAuth(credentials);
 
       spinner.text = "Verifying credentials...";
 
@@ -32,16 +31,18 @@ export const loginCommand = new Command("login")
       });
 
       if (me.data) {
-        setUser({
+        const user = {
           id: me.data.id!,
           username: me.data.username!,
           name: me.data.name!,
-        });
+        };
+        const key = setAccount(user, credentials);
+        switchAccount(key);
         spinner.stop();
-        printSuccess(`Logged in as @${me.data.username} (${me.data.name})`);
+        printSuccess(`Logged in as @${user.username} (${user.name})`);
       } else {
         spinner.stop();
-        printSuccess("Authentication successful.");
+        printSuccess("Authentication successful, but could not retrieve user info.");
       }
     } catch (error) {
       handleError(error);

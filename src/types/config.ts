@@ -12,13 +12,23 @@ export interface UserInfo {
   name: string;
 }
 
+export interface AccountData {
+  auth: AuthCredentials;
+  user: UserInfo;
+}
+
 export interface XliConfig {
+  // Legacy (v1) - single account
   auth?: AuthCredentials;
   user?: UserInfo;
+  // Multi-account (v2)
+  currentAccount?: string; // "@username"
+  accounts?: Record<string, AccountData>; // key: "@username"
 }
 
 export interface GlobalOptions {
   json?: boolean;
   noColor?: boolean;
   verbose?: boolean;
+  account?: string; // --account flag
 }
